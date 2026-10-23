@@ -46,6 +46,20 @@ personal-notes-app/
 
 ---
 
+## 🌐 Live Hosted Link
+
+- **Immediate Public Preview**: [https://hot-aliens-win.loca.lt](https://hot-aliens-win.loca.lt) *(Click "Click to Submit" / Enter IP `111.92.88.130` if prompted)*
+
+### 🚀 Permanent Free 1-Click Cloud Hosting (Render)
+1. Go to [Render.com](https://render.com) and sign in with GitHub.
+2. Click **New +** ➔ **Web Service** and choose **personal-notes-app**.
+3. Set Environment Variables:
+   - `MONGODB_URI`: `mongodb+srv://Harsha:abcd1234@cluster0.ycplca6.mongodb.net/personal_notes?retryWrites=true&w=majority`
+   - `JWT_SECRET`: `supersecretpersonalnotesjwtkey12345`
+4. Click **Deploy Web Service** to receive your permanent `https://personal-notes-app.onrender.com` URL!
+
+---
+
 ## 🐳 Quick Start with Docker (Full-Stack + MongoDB)
 
 The easiest way to run the entire application (MongoDB + Express Backend + React Frontend) is with Docker:

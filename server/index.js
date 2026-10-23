@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const dotenv = require('dotenv');
+const path = require('path');
 
 // Load environment variables from .env
 dotenv.config();
@@ -31,9 +32,21 @@ app.get('/api/health', (req, res) => {
   });
 });
 
-// Root friendly route
-app.get('/', (req, res) => {
-  res.send('Personal Notes API Server is running. Access endpoints via /api/auth and /api/notes');
+// Serve frontend static assets from client/dist
+const clientDistPath = path.join(__dirname, '../client/dist');
+app.use(express.static(clientDistPath));
+
+// Fallback to React SPA index.html for any frontend routes
+app.get('*', (req, res, next) => {
+  if (req.path.startsWith('/api')) {
+    return next();
+  }
+  const indexPath = path.join(clientDistPath, 'index.html');
+  res.sendFile(indexPath, (err) => {
+    if (err) {
+      res.send('Personal Notes API Server is running. (Run npm run build in client to serve frontend)');
+    }
+  });
 });
 
 // Connect to MongoDB & Start Server

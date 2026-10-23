@@ -2,12 +2,12 @@
   "name": "personal-notes-app",
   "version": "1.0.0",
   "description": "Full-stack MERN Personal Notes App adhering strictly to standard RESTful conventions",
+  "main": "server/index.js",
   "scripts": {
-    "dev:server": "npm --prefix server run dev",
-    "dev:client": "npm --prefix client run dev",
-    "start:server": "npm --prefix server start",
-    "build:client": "npm --prefix client run build",
-    "install:all": "npm --prefix server install && npm --prefix client install"
+    "build": "npm --prefix client install && npm --prefix client run build && npm --prefix server install",
+    "start": "node server/index.js",
+    "dev:server": "node server/index.js",
+    "dev:client": "npm --prefix client run dev"
   },
   "keywords": ["mern", "react", "express", "mongodb", "node", "jwt", "notes"],
   "author": "",
