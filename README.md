@@ -54,9 +54,9 @@ The easiest way to run the entire application (MongoDB + Express Backend + React
 docker compose up --build -d
 ```
 
-- **Frontend App**: [http://localhost:5173](http://localhost:5173)
-- **Backend API**: [http://localhost:5000](http://localhost:5000)
-- **MongoDB**: `localhost:27017`
+- **Frontend Web App (Open in Browser)**: [http://localhost:5173](http://localhost:5173)
+- **Backend API (REST endpoints)**: [http://localhost:5000/api/health](http://localhost:5000/api/health)
+- **MongoDB Database**: Runs internally on port `27017` (accessed by backend driver or MongoDB Compass, not a web browser).
 
 To shut down the containers:
 ```bash
