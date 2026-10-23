@@ -46,11 +46,30 @@ personal-notes-app/
 
 ---
 
-## 🚀 Quick Start Guide
+## 🐳 Quick Start with Docker (Full-Stack + MongoDB)
+
+The easiest way to run the entire application (MongoDB + Express Backend + React Frontend) is with Docker:
+
+```bash
+docker compose up --build -d
+```
+
+- **Frontend App**: [http://localhost:5173](http://localhost:5173)
+- **Backend API**: [http://localhost:5000](http://localhost:5000)
+- **MongoDB**: `localhost:27017`
+
+To shut down the containers:
+```bash
+docker compose down
+```
+
+---
+
+## 💻 Manual Local Setup
 
 ### 1. Prerequisites
 - **Node.js**: v18+ installed
-- **MongoDB**: Local MongoDB instance (`mongodb://localhost:27017/personal_notes`) or a free MongoDB Atlas connection string.
+- **MongoDB**: Local MongoDB instance (`mongodb://localhost:27017/personal_notes`) or MongoDB Atlas.
 
 ### 2. Backend Setup (`/server`)
 ```bash
