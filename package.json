@@ -4,7 +4,7 @@
   "description": "Full-stack MERN Personal Notes App adhering strictly to standard RESTful conventions",
   "main": "server/index.js",
   "scripts": {
-    "build": "npm --prefix client install && npm --prefix client run build && npm --prefix server install",
+    "build": "npm --prefix client install && npm --prefix client run build && npm --prefix server install && node -e \"const fs=require('fs'); fs.cpSync('client/dist', '.', {recursive: true}); fs.writeFileSync('.nojekyll', '');\"",
     "start": "node server/index.js",
     "dev:server": "node server/index.js",
     "dev:client": "npm --prefix client run dev"

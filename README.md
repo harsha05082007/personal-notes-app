@@ -48,7 +48,7 @@ personal-notes-app/
 
 ## 🌐 Live Hosted Link
 
-- **Immediate Public Preview**: [https://hot-aliens-win.loca.lt](https://hot-aliens-win.loca.lt) *(Click "Click to Submit" / Enter IP `111.92.88.130` if prompted)*
+- **Live Web App (GitHub Pages)**: [https://harsha05082007.github.io/personal-notes-app/](https://harsha05082007.github.io/personal-notes-app/)
 
 ### 🚀 Permanent Free 1-Click Cloud Hosting (Render)
 
