@@ -51,12 +51,30 @@ personal-notes-app/
 - **Immediate Public Preview**: [https://hot-aliens-win.loca.lt](https://hot-aliens-win.loca.lt) *(Click "Click to Submit" / Enter IP `111.92.88.130` if prompted)*
 
 ### 🚀 Permanent Free 1-Click Cloud Hosting (Render)
-1. Go to [Render.com](https://render.com) and sign in with GitHub.
-2. Click **New +** ➔ **Web Service** and choose **personal-notes-app**.
-3. Set Environment Variables:
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/harsha05082007/personal-notes-app)
+
+#### Option 1: 1-Click Deploy (Fastest)
+1. Click the **Deploy to Render** button above (or open [render.com/deploy?repo=https://github.com/harsha05082007/personal-notes-app](https://render.com/deploy?repo=https://github.com/harsha05082007/personal-notes-app)).
+2. Sign in with GitHub.
+3. Render will automatically read `render.yaml` from this repository.
+4. Enter your `MONGODB_URI`:
+   ```
+   mongodb+srv://Harsha:abcd1234@cluster0.ycplca6.mongodb.net/personal_notes?retryWrites=true&w=majority
+   ```
+5. Click **Apply** / **Deploy**! Render builds the React frontend, starts the Express server, and gives you your live URL.
+
+#### Option 2: Manual Web Service Setup
+1. Go to [Render Dashboard](https://dashboard.render.com) and click **New +** ➔ **Web Service**.
+2. Connect your GitHub repository: `harsha05082007/personal-notes-app`.
+3. Configure settings:
+   - **Environment**: `Node`
+   - **Build Command**: `npm run build`
+   - **Start Command**: `npm start`
+4. Under **Environment Variables**, add:
    - `MONGODB_URI`: `mongodb+srv://Harsha:abcd1234@cluster0.ycplca6.mongodb.net/personal_notes?retryWrites=true&w=majority`
    - `JWT_SECRET`: `supersecretpersonalnotesjwtkey12345`
-4. Click **Deploy Web Service** to receive your permanent `https://personal-notes-app.onrender.com` URL!
+5. Click **Deploy Web Service** to launch your live site!
 
 ---
 
